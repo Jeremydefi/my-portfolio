@@ -1,0 +1,157 @@
+@tailwind utilities;
+
+/* @config {
+  theme: {
+    extend: {
+      animation: {
+        'spin-slow':'spin6slinearinfinite', ;
+      }
+      ,
+      colors: {
+        lighthover: "#fcf4ff";
+      }
+    }
+  }
+} */
+
+/* Dark Mode Styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000;
+  --border-color: #d1d5db;
+  --card-bg: #ffffff;
+  --card-hover: #fcf4ff;
+  --gradient-start: #006400;
+  --gradient-end: #da7d20;
+  --header-bg: rgba(255, 255, 255, 0.5);
+  --shadow-color: rgb(255, 255, 255);
+  --ul-color: white;
+}
+
+.dark-mode {
+  --bg-color: #001a00;
+  --text-color: #fff;
+  --border-color: #4b5563;
+  --card-bg: #001a00;
+  --card-hover: #004900;
+  --gradient-start: #00a000;
+  --gradient-end: #ff9d2d;
+  --header-bg: rgba(30, 30, 30, 0.8);
+  --shadow-color: rgb(255, 255, 255);
+  --resume-color: black;
+  --ul-color: #001a00;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation */
+nav a:hover {
+  color: #ff9d2d;
+}
+
+nav ul {
+  background-color: var(--ul-color) !important;
+}
+
+nav {
+  background-color: var(--ul-color);
+}
+
+/* #contact {
+  
+  background: white; 
+  transition: background 1.5s ease-in-out;
+}
+
+#hoverContact:hover {
+  background: linear-gradient(90deg, #006400, #da7d20);
+} */
+
+/* #navul {
+  background-color: var(--ul-color);
+} */
+
+nav a,
+footer a,
+footer p {
+  color: var(--text-color);
+}
+
+/* About */
+#moreAbout {
+  color: var(--text-color);
+}
+
+#justBlack {
+  color: black;
+}
+
+/* resume */
+#resume {
+  color: var(--resume-color);
+}
+
+/* Cards and Borders */
+.border,
+.border-gray-400 {
+  border-color: var(--border-color) !important;
+}
+
+.rounded-lg,
+.rounded-xl {
+  background-color: var(--card-bg);
+}
+
+/* Hover Effects */
+.hover\:bg-lightHover:hover {
+  background-color: var(--card-hover) !important;
+  transition: ease 1s;
+}
+
+/* Form Fields */
+input,
+textarea {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color);
+  border-color: var(--border-color) !important;
+}
+
+textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+/* Gradient Buttons */
+.bg-gradient-to-r {
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  ) !important;
+}
+
+/* Transition for smooth theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Mobile menu background */
+#sideMenu {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Contact section background - Keep this subtle in dark mode */
+#contact {
+  background-color: var(--bg-color);
+}
+
+/* For the footer section */
+.border-t {
+  border-color: var(--border-color) !important;
+}
